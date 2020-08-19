@@ -1,0 +1,14 @@
+<rewrite>
+  <rules>
+    <!--# Turn rewrite engine on-->
+    <!--# map neat URL to internal URL-->
+    <rule name="Imported Rule 1">
+      <match url="^fbuser/list/$" />
+      <action type="Rewrite" url="RestController.php?view=all" appendQueryString="true" />
+    </rule>
+    <rule name="Imported Rule 2">
+      <match url="^fbuser/list/([0-9]+)/$" ignoreCase="false" />
+      <action type="Rewrite" url="RestController.php?view=single&amp;id=" appendQueryString="false" />
+    </rule>
+  </rules>
+</rewrite>
